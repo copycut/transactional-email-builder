@@ -1,0 +1,80 @@
+/* -------------------------------------
+    BUTTONS
+------------------------------------- */
+.btn-container {
+  background-color: $white;
+  border-top: 1px solid $border-color-light;
+  padding: $padding;
+
+  .btn {
+    td {
+      padding: 0;
+    }
+  }
+}
+
+.btn {
+  -premailer-cellpadding: 0; // This is a specific style for the premailer gem
+  -premailer-cellspacing: 0; // This is a specific style for the premailer gem
+  -premailer-width: 100%; // This is a specific style for the premailer gem
+  width: 100%;
+
+  > tr > td {
+    padding-bottom: 15px;
+  }
+
+  table {
+    -premailer-cellpadding: 0; // This is a specific style for the premailer gem
+    -premailer-cellspacing: 0; // This is a specific style for the premailer gem
+    -premailer-width: auto; // This is a specific style for the premailer gem
+    width: auto;
+  }
+
+  table td {
+    background-color: $white;
+    border-radius: $btn-br;
+    text-align: center;
+  }
+
+  a {
+    background-color: $white;
+    border: solid 1px $primary-color;
+    border-radius: $btn-br;
+    color: $primary-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 25px;
+    text-decoration: none;
+  }
+}
+
+// Primary call to action button
+.btn-primary {
+
+  table td {
+    background-color: $primary-color;
+  }
+
+  a {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+  }
+}
+
+// Secondary button
+.btn-secondary {
+
+  table td {
+    background-color: transparent;
+  }
+
+  a {
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}

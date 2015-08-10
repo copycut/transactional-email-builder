@@ -1,0 +1,6 @@
+---
+email_expert_message_subject: <%= i18n[language]['general'].email_expert_message_subject %>
+---
+{
+  "subject": "{{email_expert_message_subject}}"
+}

@@ -1,0 +1,6 @@
+---
+email_remove_subuser_subject: <%= i18n[language]['general'].email_remove_subuser_subject %>
+---
+{
+  "subject": "{{email_remove_subuser_subject}}"
+}

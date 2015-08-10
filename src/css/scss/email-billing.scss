@@ -1,0 +1,44 @@
+@import 'partials/config';
+
+.invoice-description {
+  margin: 0 auto !important;
+  width: 80%;
+}
+
+.invoice {
+  margin: 40px auto;
+  text-align: left;
+  width: 80%;
+
+  td {
+    padding: 5px 0;
+  }
+
+  .invoice-items {
+    width: 100%;
+
+    thead td {
+      font-weight: bold;
+    }
+
+    tbody td {
+      font-size: 13px;
+    }
+    
+    td {
+      border-top: #eee 1px solid;
+    }
+
+    .total {
+      td {
+        border-top: 2px solid #333;
+        font-weight: 700;
+      }
+
+      tr:last-child td {
+        border-bottom: 2px solid #333;
+      }
+    }
+  }
+}
+

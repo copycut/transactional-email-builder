@@ -1,0 +1,32 @@
+.alert {
+  font-size: 16px;
+  color: $white;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  background-color: $grey;
+  
+  a {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &.alert-warning {
+    background-color: $warning;
+  }
+
+  &.alert-error {
+    background-color: $error;
+  }
+
+  &.alert-primary {
+    background-color: $primary;
+  }
+
+  &.alert-success {
+    background-color: $success;
+  }
+}

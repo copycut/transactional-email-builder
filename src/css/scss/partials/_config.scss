@@ -1,0 +1,74 @@
+/* -------------------------------------
+    CONFIGURE YOUR VARIABLES
+------------------------------------- */
+
+$padding: 20px; // For consistent padding
+$width: 600px; // Width of the content area
+$br: 3px; // Border radius
+$btn-br: 5px; // Border radius
+$font-size: 15px;
+
+// Colors values
+$black            : #000000;
+$white            : #ffffff;
+
+$grey-smoke       : #F5F7FA;
+$grey-lighter     : #E6E9ED;
+$grey-light       : #CCD1D9;
+$grey             : #AAB2BD;
+$grey-medium      : #656D78;
+$grey-dark        : #434A54;
+$grey-darker      : #353B48;
+
+$primary-dark     : #3876AC;
+$primary          : #428BCA;
+$primary-light    : #A0C5E4;
+$primary-lighter  : #CFE2F2;
+$primary-smoke    : #ECF3FA;
+
+// Primary alias
+$info-dark        : $primary-dark;
+$info             : $primary;
+$info-light       : $primary-light;
+$info-lighter     : $primary-lighter;
+$info-smoke       : $primary-smoke;
+
+$success-dark     : #4E9D4E;
+$success          : #5CB85C;
+$success-light    : #ADDBAD;
+$success-lighter  : #D7EDD6;
+$success-smoke    : #EEF8EE;
+
+$warning-dark     : #D3860C;
+$warning          : #F89D0E;
+$warning-light    : #FBCE86;
+$warning-lighter  : #FEE6C8;
+$warning-smoke    : #FEF5E6;
+
+$error-dark       : #B94743;
+$error            : #D9534F;
+$error-light      : #ECA9A7;
+$error-lighter    : #F6D4D4;
+$error-smoke      : #FBEDED;
+
+$competitor-light : #AFE5E7;
+$competitor       : #539597;
+$competitor-dark  : #29494A;
+
+// Colors Links
+$active-bg         : $primary-smoke;
+$active-border     : $primary-lighter;
+$active-color      : $primary-dark;
+$bg                : $grey-smoke;
+$border-color      : $grey-light;
+$border-color-light: $grey-lighter;
+$disabled-color    : $grey-light;
+$hover-bg          : $grey-smoke;
+$hover-border      : $grey-lighter;
+$hover-color       : $grey-medium;
+$link-color        : $primary;
+$link-color-hover  : $primary-dark;
+$text-color        : $grey-medium;
+$text-color-light  : $grey;
+$title-color       : $grey-darker;
+$primary-color     : $primary;

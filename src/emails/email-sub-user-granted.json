@@ -1,0 +1,6 @@
+---
+email_granted_subuser_subject: <%= i18n[language]['general'].email_granted_subuser_subject %>
+---
+{
+  "subject": "{{email_granted_subuser_subject}}"
+}

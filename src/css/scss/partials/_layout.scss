@@ -1,0 +1,52 @@
+/* -------------------------------------
+    BODY & CONTAINER
+------------------------------------- */
+
+body {
+  background-color: $grey-smoke;
+  color: $text-color;
+}
+
+.body {
+  background-color: $grey-smoke;
+  width: 100%;
+  color: $text-color;
+}
+
+/* -------------------------------------
+    HEADER, FOOTER
+------------------------------------- */
+
+.header {
+  margin-bottom: $padding;
+  margin-top: ($padding - 10);
+  width: 100%;
+}
+
+.logo-container {
+  -premailer-valign: middle;
+
+  a {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  clear: both;
+  width: 100%;
+
+  * {
+    color: $text-color-light;
+    font-size: 12px;
+  }
+
+  td {
+    padding: 0 0 20px 0;
+  }
+
+  a {
+    color: $text-color-light;
+    text-decoration: none;
+  }
+}

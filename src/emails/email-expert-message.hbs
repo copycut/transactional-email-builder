@@ -1,0 +1,43 @@
+---
+email_expert_message_subject: <%= i18n[language]['general'].email_expert_message_subject %>
+email_expert_message_description: <%= i18n[language]['general'].email_expert_message_description %>
+email_expert_message_action: <%= i18n[language]['general'].email_expert_message_action %>
+title: <%= i18n[language]['general'].email_expert_message_subject %>
+layout: experts.hbs
+---
+<table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action" itemscope itemtype="http://schema.org/InformAction">
+  <tr>
+    <td class="content-wrap body-content">
+      <meta itemprop="name" content="Notification Email" />
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="content-block">
+            <h2>{{email_expert_message_subject}}</h2>
+          </td>
+        </tr>
+        <tr>
+          <td class="content-block">
+            {{{email_expert_message_description}}}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="btn-container" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+      <table class="btn btn-primary">
+      <tr>
+        <td align="center">
+          <table>
+            <tr>
+              <td>
+                <a href="mailto:{{raw '[[email]]'}}">{{email_expert_message_action}}</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
