@@ -1,6 +1,5 @@
 ---
 email_expert_message_subject: <%= i18n[language]['general'].email_expert_message_subject %>
-email_expert_message_description: <%= i18n[language]['general'].email_expert_message_description %>
 email_expert_message_action: <%= i18n[language]['general'].email_expert_message_action %>
 title: <%= i18n[language]['general'].email_expert_message_subject %>
 layout: experts.hbs
@@ -17,7 +16,7 @@ layout: experts.hbs
         </tr>
         <tr>
           <td class="content-block">
-            {{{email_expert_message_description}}}
+            {{raw '[[message]]'}}
           </td>
         </tr>
       </table>
