@@ -1,5 +1,5 @@
 ---
-email_expert_message_subject: <%= i18n[language]['general'].email_expert_message_subject %>
+email_expert_message_subject: <%= i18n[language]['general'].email_expert_message_subject %> {{name}}
 ---
 {
   "subject": "{{email_expert_message_subject}}"
