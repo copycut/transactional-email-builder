@@ -1,0 +1,45 @@
+.alert-box {
+  padding: 10px 10px 0 10px;
+  color: $primary;
+  text-align: center;
+  border: 1px solid $primary;
+  background-color: $primary-smoke;
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .alert-box-content {
+    display: inline-block;
+    width: auto;
+  }
+
+  .alert-box-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &.alert-box-warning {
+    color: $warning;
+    border-color: $warning;
+    background-color: $warning-smoke;
+  }
+
+  &.alert-box-error {
+    color: $error;
+    border-color: $error;
+    background-color: $error-smoke;
+  }
+
+  &.alert-box-primary {
+    color: $primary;
+    border-color: $primary;
+    background-color: $primary-smoke;
+  }
+
+  &.alert-box-success {
+    color: $success;
+    border-color: $success;
+    background-color: $success-smoke;
+  }
+}

@@ -1,12 +1,12 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     config: require('config'),
 
     paths: {
-      src:        'src',
-      dist:       'dist'
+      src: 'src',
+      dist: 'dist'
     },
 
     sass: {
@@ -39,18 +39,18 @@ module.exports = function(grunt) {
           plugins: ['assemble-contrib-i18n'],
           i18n: {
             languages: [
-              "en",
-              "es",
-              "fr",
-              "nl",
-              "pt",
-              "de"
+              'en',
+              'es',
+              'fr',
+              'nl',
+              'pt',
+              'de'
             ],
             templates: ['<%= paths.src %>/emails/*.hbs']
           }
         },
         dest: '<%= paths.dist %>/',
-        src: '!*.*',
+        src: '!*.*'
       },
 
       meta: {
@@ -61,18 +61,18 @@ module.exports = function(grunt) {
           plugins: ['assemble-contrib-i18n'],
           i18n: {
             languages: [
-              "en",
-              "es",
-              "fr",
-              "nl",
-              "pt",
-              "de"
+              'en',
+              'es',
+              'fr',
+              'nl',
+              'pt',
+              'de'
             ],
             templates: ['<%= paths.src %>/emails/*.json']
           }
         },
         dest: '<%= paths.dist %>/',
-        src: '!*.*',
+        src: '!*.*'
       }
     },
 
@@ -82,9 +82,9 @@ module.exports = function(grunt) {
           removeComments: true
         },
         files: [{
-            expand: true,
-            src: ['<%= paths.dist %>/*.html'],
-            dest: ''
+          expand: true,
+          src: ['<%= paths.dist %>/*.html'],
+          dest: ''
         }]
       },
       txt: {
@@ -92,10 +92,10 @@ module.exports = function(grunt) {
           mode: 'txt'
         },
         files: [{
-            expand: true,
-            src: ['<%= paths.dist %>/*.html'],
-            dest: '',
-            ext: '.txt'
+          expand: true,
+          src: ['<%= paths.dist %>/*.html'],
+          dest: '',
+          ext: '.txt'
         }]
       }
     },
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
       },
       translations: {
         options: {
-          bucket: '<%= config.s3.translations.bucketname %>',
+          bucket: '<%= config.s3.translations.bucketname %>'
         },
         files: [
           { cwd: '<%= paths.src %>/data/i18n/', dest: '<%= config.s3.translations.bucketdir %>/en.json', action: 'download' },

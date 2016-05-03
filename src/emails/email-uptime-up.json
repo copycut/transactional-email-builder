@@ -1,0 +1,7 @@
+---
+website_up_alert: <%= i18n[language]['monitoring'].website_up_alert %>
+url: '{{url}}'
+---
+{
+  "subject": "{{i18nVar website_up_alert url}}"
+}

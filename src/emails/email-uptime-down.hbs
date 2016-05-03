@@ -1,0 +1,46 @@
+---
+website_down_alert: <%= i18n[language]['monitoring'].website_down_alert %>
+email_down_access: <%= i18n[language]['monitoring'].email_down_access %>
+url: '{{url}}'
+title: <%= i18n[language]['monitoring'].email_down_access %>
+---
+<table class="main" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <!-- ALERT BOX -->
+      <table class="alert-box alert-box-error" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center" valign="middle">
+            <table class="alert-box-content">
+              <tr>
+                <td align="center" valign="middle">
+                  <img class="icon" src="https://d384x5zk471rz.cloudfront.net/uptime-email-assets/icon-bullet-warning.png" width="20" alt=""/>
+                </td align="center" valign="middle">
+                <td class="alert-box-text">{{i18nVar website_down_alert url}}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="btn-container">
+      <table class="btn btn-primary">
+      <tr>
+        <td align="center">
+          <table>
+            <tr>
+              <td>
+                <a href="https://www.woorank.com/{{language}}/review/{{raw '[[url]]'}}#module-technologies-anchor">
+                  {{email_down_access}}
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
