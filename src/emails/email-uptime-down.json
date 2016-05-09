@@ -1,6 +1,6 @@
 ---
 website_down_alert: <%= i18n[language]['monitoring'].website_down_alert %>
-url: '{{url}}'
+url: '{{var:url}}'
 ---
 {
   "subject": "{{i18nVar website_down_alert url}}"
