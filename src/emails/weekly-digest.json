@@ -1,6 +1,6 @@
 ---
-website_up_alert: "Weekly Email Digest"
+weekly_digest_subject: <%= i18n[language]['general'].weekly_digest_subject %>
 ---
 {
-  "subject": "Weekly Email Digest"
+  "subject": "{{weekly_digest_subject}}"
 }

@@ -1,5 +1,5 @@
 ---
-title: "Weekly Email Digest"
+title: <%= i18n[language]['general'].weekly_digest_subject %>
 still_questions: <%= i18n[language]['general'].weekly_digest_unsubscribe %>
 weekly_digest_title: <%= i18n[language]['general'].weekly_digest_title %>
 weekly_digest_keywords_title: <%= i18n[language]['general'].weekly_digest_keywords_title %>
@@ -43,6 +43,7 @@ weekly_digest_bounce_rate: <%= i18n[language]['general'].weekly_digest_bounce_ra
 weekly_digest_new_visits: <%= i18n[language]['general'].weekly_digest_new_visits %>
 weekly_digest_new_visitors: <%= i18n[language]['general'].weekly_digest_new_visitors %>
 weekly_digest_returning_visitors: <%= i18n[language]['general'].weekly_digest_returning_visitors %>
+weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
 ---
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
 
@@ -54,7 +55,7 @@ weekly_digest_returning_visitors: <%= i18n[language]['general'].weekly_digest_re
         <tr>
           <td align="center" valign="middle">
             <h1 class="title-box-text">{{weekly_digest_title}} <span class="url">\{{url}}</span></h1>
-            <p class="title-box-note">\{{date}}</p>
+            <p class="title-box-note">{{weekly_digest_week}} #\{{week date}} - \{{year date}}</p>
           </td>
         </tr>
       </table>
