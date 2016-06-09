@@ -1,0 +1,56 @@
+<h3 class="section-sub-title">{{weekly_digest_keywords_subtitle}}</h3>
+
+<table class="data-table" width="100%" cellpadding="0" cellspacing="0">
+  <thead class="data-table-head">
+    <tr>
+      <th class="left data-table-keyword-col">{{weekly_digest_table_head_keyword}}</th>
+      <th>{{weekly_digest_previous_week}}</th>
+      <th>{{weekly_digest_current_week}}</th>
+      <th>{{weekly_digest_change}}</th>
+    </tr>
+  </thead>
+  <tbody class="data-table-body">
+    \{{#each serp_weekly.data.topChanges}}
+    <tr>
+      <td class="keyword-tag">
+        <table class="keyword-tag-item primary" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="keyword-tag-corner">
+              <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/keyword-tag-primary.png" height="28" width="18" alt="" />
+            </td>
+            <td><span class="keyword-text">\{{keyword}}</span></td>
+          </tr>
+        </table>
+      </td>
+
+      <td class="keyword-position">
+          <span class="keyword-position-text">\{{previous}}</span>
+      </td>
+
+      <td class="keyword-position">
+          <span class="keyword-position-text">\{{current}}</span>
+      </td>
+
+      \{{#compare delta "<" 0}}
+      <td class="keyword-change up">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
+          <span class="keyword-change-text">\{{abs delta}}</span>
+      </td>
+      \{{/compare}}
+      \{{#compare delta ">" 0}}
+      <td class="keyword-change down">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
+          <span class="keyword-change-text">\{{abs delta}}</span>
+      </td>
+      \{{/compare}}
+      \{{#compare delta "==" 0}}
+      <td class="keyword-change">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
+          <span class="keyword-change-text">\{{abs delta}}</span>
+      </td>
+      \{{/compare}}
+
+    </tr>
+    \{{/each}}
+  </tbody>
+</table>

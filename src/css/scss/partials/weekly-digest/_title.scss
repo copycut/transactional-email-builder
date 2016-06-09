@@ -1,0 +1,26 @@
+.title-box-text {
+  color: $white !important;
+}
+
+.section-title {
+  vertical-align: middle;
+  margin-bottom: 20px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+  }
+}
+
+.section-sub-title {
+  color: $grey-medium !important;
+  margin-bottom: 10px;
+  font-weight: $font-weight-semibold;
+}
+
+.section-small-title {
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  color: $grey-dark;
+}

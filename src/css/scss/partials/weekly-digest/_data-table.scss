@@ -1,0 +1,53 @@
+.data-table {
+
+  &.data-table-traffic {
+    margin-bottom: 30px;
+  }
+
+  .left {
+    text-align: left !important;
+  }
+
+  .right {
+    text-align: right !important;
+  }
+
+  .middle {
+    vertical-align: middle;
+  }
+
+  tr {
+    th,
+    td {
+      text-align: center;
+      padding: 5px 0;
+
+      &.right {
+        padding-right: 10px !important;
+      }
+    }
+  }
+
+  .data-table-head {
+    th {
+      text-transform: uppercase;
+      font-size: $font-size-small;
+      color: $grey-dark;
+      font-weight: $font-weight-light;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .data-table-body {
+    tr {
+      th,
+      td {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+
+  .data-table-keyword-col {
+    min-width: 120px;
+  }
+}

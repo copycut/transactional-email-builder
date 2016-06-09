@@ -160,6 +160,30 @@ module.exports = function (grunt) {
         src: [ '<%= paths.dist %>/*.html', '<%= paths.dist %>/*.txt', '<%= paths.dist %>/*.json' ],
         dest: '<%= paths.dist %>/email_templates.zip'
       }
+    },
+
+    watch: {
+      styles: {
+        files: ['**/*.scss'],
+        tasks: ['dev'],
+        options: {
+          spawn: false
+        }
+      },
+      templates: {
+        files: ['**/*.hbs'],
+        tasks: ['dev'],
+        options: {
+          spawn: false
+        }
+      },
+      data: {
+        files: ['**/data/**/*.json'],
+        tasks: ['dev'],
+        options: {
+          spawn: false
+        }
+      }
     }
   });
 
@@ -167,4 +191,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['aws_s3:translations', 'sass', 'assemble', 'premailer']);
   grunt.registerTask('s3upload', ['cdn:aws_s3', 'zip', 'aws_s3:emails']);
   grunt.registerTask('ci', [ 'default', 's3upload' ]);
+  grunt.registerTask('dev', ['sass', 'assemble']);
+  grunt.registerTask('look', ['watch']);
 };

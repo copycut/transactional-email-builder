@@ -1,0 +1,36 @@
+.graph-legend {
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  td,
+  .graph-legend-text {
+    padding: 1px 0;
+    vertical-align: middle;
+    color: $grey;
+    font-size: $font-size-small;
+    line-height: $font-size-small;
+  }
+}
+
+.graph-legend-text {
+  display: inline-block;
+
+  &.up {
+    color: $success;
+  }
+
+  &.down {
+    color: $error;
+  }
+}
+
+.graph-legend-title {
+  color: $grey-medium;
+  text-transform: capitalize;
+}

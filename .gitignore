@@ -12,3 +12,5 @@ config/*
 !config/default.js
 !.gitkeep
 /env/.env
+tools/email.html
+npm-debug.log

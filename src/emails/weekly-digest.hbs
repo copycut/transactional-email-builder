@@ -1,0 +1,295 @@
+---
+title: "Weekly Email Digest"
+still_questions: <%= i18n[language]['general'].weekly_digest_unsubscribe %>
+weekly_digest_title: <%= i18n[language]['general'].weekly_digest_title %>
+weekly_digest_keywords_title: <%= i18n[language]['general'].weekly_digest_keywords_title %>
+weekly_digest_keywords_subtitle: <%= i18n[language]['general'].weekly_digest_keywords_subtitle %>
+weekly_digest_competitors_title: <%= i18n[language]['general'].weekly_digest_competitors_title %>
+weekly_digest_competitors_subtitle: <%= i18n[language]['general'].weekly_digest_competitors_subtitle %>
+weekly_digest_previous_week: <%= i18n[language]['general'].weekly_digest_previous_week %>
+weekly_digest_current_week: <%= i18n[language]['general'].weekly_digest_current_week %>
+weekly_digest_change: <%= i18n[language]['general'].weekly_digest_change %>
+weekly_digest_table_head_keyword: <%= i18n[language]['general'].weekly_digest_table_head_keyword %>
+weekly_digest_competitors_nodata: <%= i18n[language]['general'].weekly_digest_competitors_nodata %>
+weekly_digest_traffic_title: <%= i18n[language]['general'].weekly_digest_traffic_title %>
+weekly_digest_traffic_subtitle: <%= i18n[language]['general'].weekly_digest_traffic_subtitle %>
+weekly_digest_social_title: <%= i18n[language]['general'].weekly_digest_social_title %>
+weekly_digest_social_subtitle: <%= i18n[language]['general'].weekly_digest_social_subtitle %>
+weekly_digest_source: <%= i18n[language]['general'].weekly_digest_source %>
+weekly_digest_metric: <%= i18n[language]['general'].weekly_digest_metric %>
+weekly_digest_top_channels: <%= i18n[language]['general'].weekly_digest_top_channels %>
+weekly_digest_landing_pages: <%= i18n[language]['general'].weekly_digest_landing_pages %>
+weekly_digest_from: <%= i18n[language]['general'].weekly_digest_from %>
+weekly_digest_to: <%= i18n[language]['general'].weekly_digest_to %>
+weekly_digest_keyword_nodata: <%= i18n[language]['general'].weekly_digest_keyword_nodata %>
+weekly_digest_competitor_nodata: <%= i18n[language]['general'].weekly_digest_competitor_nodata %>
+weekly_digest_competitors_nodata2: <%= i18n[language]['general'].weekly_digest_competitors_nodata2 %>
+weekly_digest_traffic_nodata: <%= i18n[language]['general'].weekly_digest_traffic_nodata %>
+weekly_digest_social_nodata: <%= i18n[language]['general'].weekly_digest_social_nodata %>
+weekly_digest_cta_text: <%= i18n[language]['general'].weekly_digest_cta_text %>
+weekly_digest_cta_btn: <%= i18n[language]['general'].weekly_digest_cta_btn %>
+weekly_digest_weekly_traffic_title: <%= i18n[language]['general'].weekly_digest_weekly_traffic_title %>
+weekly_digest_new_and_returning_visitor: <%= i18n[language]['general'].weekly_digest_new_and_returning_visitor %>
+weekly_digest_woorank_btn: <%= i18n[language]['general'].weekly_digest_woorank_btn %>
+weekly_digest_sync_google_text: <%= i18n[language]['general'].weekly_digest_sync_google_text %>
+weekly_digest_sync_google_btn: <%= i18n[language]['general'].weekly_digest_sync_google_btn %>
+weekly_digest_sync_serp_text: <%= i18n[language]['general'].weekly_digest_sync_serp_text %>
+weekly_digest_sync_serp_btn: <%= i18n[language]['general'].weekly_digest_sync_serp_btn %>
+weekly_digest_session: <%= i18n[language]['general'].weekly_digest_session %>
+weekly_digest_users: <%= i18n[language]['general'].weekly_digest_users %>
+weekly_digest_page_views: <%= i18n[language]['general'].weekly_digest_page_views %>
+weekly_digest_average_session_duration: <%= i18n[language]['general'].weekly_digest_average_session_duration %>
+weekly_digest_bounce_rate: <%= i18n[language]['general'].weekly_digest_bounce_rate %>
+weekly_digest_new_visits: <%= i18n[language]['general'].weekly_digest_new_visits %>
+weekly_digest_new_visitors: <%= i18n[language]['general'].weekly_digest_new_visitors %>
+weekly_digest_returning_visitors: <%= i18n[language]['general'].weekly_digest_returning_visitors %>
+---
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
+
+<table class="main weekly-digest" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <!-- TITLE BOX -->
+      <table class="title-box title-box-primary" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center" valign="middle">
+            <h1 class="title-box-text">{{weekly_digest_title}} <span class="url">\{{url}}</span></h1>
+            <p class="title-box-note">\{{date}}</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  \{{#if serp_weekly}}
+  <!-- KEYWORDS -->
+    <tr>
+      <td class="content-wrap body-content">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-block" align="center" valign="top">
+              <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
+                <!-- TITLE -->
+                <tr>
+                  <td align="center">
+                      <h2 class="section-title">
+                        <img height="22" width="22" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/keyword-icon.png" alt="" />
+                        {{weekly_digest_keywords_title}}
+                      </h2>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- TABLE DATA -->
+                \{{#if serp_weekly.data.topChanges}}
+                  <tr>
+                    <td>
+                      {{> keywordTable}}
+                    </td>
+                  </tr>
+                \{{else}}
+                  <tr>
+                    <td align="center">
+                      {{> noData text=weekly_digest_keyword_nodata}}
+                    </td>
+                  </tr>
+                \{{/if}}
+
+                <tr>
+                  <td class="call-to-action">
+                    <p><strong>{{weekly_digest_cta_text}}</strong></p>
+                    {{> button type='primary' href="https://www.woorank.com/en/serp{{url}}" text=weekly_digest_cta_btn}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    {{> separatorLine}}
+
+    <!-- COMPETITORS -->
+    <tr>
+      <td class="content-wrap body-content">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-block" align="center" valign="top">
+              <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
+                <!-- TITLE -->
+                <tr>
+                  <td align="center">
+                      <h2 class="section-title">
+                        <img height="21" width="24" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/competitors-icon.png" alt="" />
+                        {{weekly_digest_competitors_title}}
+                      </h2>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- TABLE DATA -->
+                \{{#if serp_weekly.data.topCompetitorsChanges}}
+                <tr>
+                  <td>
+                    {{> competitorsTable}}
+                  </td>
+                </tr>
+                \{{else}}
+                <tr>
+                  <td align="center">
+                    {{> noData text=weekly_digest_competitors_nodata2}}
+                  </td>
+                </tr>
+                \{{/if}}
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    {{> separatorLine}}
+
+  \{{else}}
+    <tr>
+      <td>
+        <!-- CTA SERP -->
+        {{> cta
+          href="https://www.woorank.com/en/serp/{{url}}"
+          btnText=weekly_digest_sync_serp_btn
+          text=weekly_digest_sync_serp_text
+        }}
+      </td>
+    </tr>
+  \{{/if}}
+
+  \{{#if analytics_weekly}}
+    <!-- TRAFFIC -->
+    <tr>
+      <td class="content-wrap body-content">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-block" align="center" valign="top">
+              <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
+                <!-- TITLE -->
+                <tr>
+                  <td align="center">
+                      <h2 class="section-title">
+                        <img height="21" width="24" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/traffic-icon.png" alt="" />
+                        {{weekly_digest_traffic_title}}
+                      </h2>
+                    </div>
+                  </td>
+                </tr>
+
+                \{{#if analytics_weekly}}
+                <!-- NUMBER DASHBOARD -->
+                <tr>
+                  <td>
+                    {{> trafficDashboard}}
+                  </td>
+                </tr>
+
+                <!-- TOP 3 CHANNELS -->
+                <tr>
+                  <td>
+                    {{> trafficTopChannels}}
+                  </td>
+                </tr>
+
+                <!-- WEEKLY TRAFFIC -->
+                <tr>
+                  <td>
+                    {{> trafficWeekly}}
+                  </td>
+                </tr>
+
+                <!-- New Vs. Returning Traffic -->
+                <tr>
+                  <td>
+                    {{> trafficNewReturning}}
+                  </td>
+                </tr>
+
+                <!-- LANDING PAGES -->
+                <tr>
+                  <td>
+                    {{> trafficLandingPages}}
+                  </td>
+                </tr>
+
+                \{{else}}
+                  <tr>
+                    <td>
+                      {{> noData text=weekly_digest_traffic_nodata}}
+                    </td>
+                  </tr>
+                \{{/if}}
+
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    {{> separatorLine}}
+
+    <!-- SOCIAL -->
+    <tr>
+      <td class="content-wrap body-content">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-block" align="center" valign="top">
+              <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
+                <!-- TITLE -->
+                <tr>
+                  <td align="center">
+                      <h2 class="section-title">
+                        <img height="22" width="20" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/social-icon.png" alt="" />
+                        {{weekly_digest_social_title}}
+                      </h2>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- TOP SOCIAL NETWORKS -->
+                <tr>
+                  <td>
+                    \{{#if analytics_weekly}}
+                      {{> socialMedia}}
+                    \{{else}}
+                      {{> noData text=weekly_digest_social_nodata}}
+                    \{{/if}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  \{{else}}
+    <tr>
+      <td>
+        <!-- CTA GOOGLE ANALYTICS -->
+        {{> cta
+          href="https://www.woorank.com/en/settings/{{url}}"
+          btnText=weekly_digest_sync_google_btn
+          text=weekly_digest_sync_google_text
+        }}
+      </td>
+    </tr>
+  \{{/if}}
+
+  {{> separatorLine}}
+
+  <tr>
+    <td class="content-wrap cta-content" align="center">
+      {{> button type='primary' href="https://www.woorank.com/en/{{url}}" text=weekly_digest_woorank_btn}}
+    </td>
+  </tr>
+</table>

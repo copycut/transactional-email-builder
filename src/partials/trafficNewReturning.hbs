@@ -1,0 +1,44 @@
+<h4 class="section-small-title">{{weekly_digest_new_and_returning_visitor}}</h4>
+
+\{{#analytics_weekly.data}}
+<table class="graph-bar-stacked" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    \{{#newVisits}}
+      <td class="bar primary"
+        style="width:\{{getPercent ../sessions.current current}}%" title="\{{getPercent ../sessions.current current}}%">
+        \{{getPercent ../sessions current}}%
+      </td>
+    \{{/newVisits}}
+    \{{#returningVisits}}
+      <td class="bar primary-light"
+        style="width:\{{getPercent ../sessions.current current}}%" title="\{{getPercent ../sessions.current current}}%">
+        \{{getPercent ../sessions current}}%
+      </td>
+    \{{/returningVisits}}
+  </tr>
+</table>
+
+<table class="graph-legend" cellpadding="0" cellspacing="0">
+  \{{#newVisits}}
+    {{> legendItem
+      title=weekly_digest_new_visitors
+      previous="{{previous}}"
+      current="{{current}}"
+      delta="{{delta}}"
+      percent="{{abs percent}}%"
+      color="primary"
+    }}
+  \{{/newVisits}}
+
+  \{{#returningVisits}}
+    {{> legendItem
+      title=weekly_digest_returning_visitors
+      previous="{{previous}}"
+      current="{{current}}"
+      delta="{{delta}}"
+      percent="{{abs percent}}%"
+      color="primary-light"
+    }}
+  \{{/returningVisits}}
+</table>
+\{{/analytics_weekly.data}}

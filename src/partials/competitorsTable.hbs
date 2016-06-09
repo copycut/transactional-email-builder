@@ -1,0 +1,73 @@
+<h3 class="section-sub-title">{{weekly_digest_competitors_subtitle}}</h3>
+\{{#serp_weekly.data}}
+
+<table class="data-table" width="100%" cellpadding="0" cellspacing="0">
+  <thead class="data-table-head">
+    <tr>
+      <th class="left data-table-keyword-col">{{weekly_digest_table_head_keyword}}</th>
+      <th>{{weekly_digest_previous_week}}</th>
+      <th>{{weekly_digest_current_week}}</th>
+      <th>{{weekly_digest_change}}</th>
+    </tr>
+  </thead>
+  <tbody class="data-table-body">
+    <!-- COMPETITORS -->
+    \{{#each topCompetitorsChanges}}
+      <tr class="competitors-row competitors-row-\{{@index}}">
+        <td colspan="4" class="competitors-title-col">
+          <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/competitor-bullet-\{{@index}}.png" height="9" width="9" alt="" />
+          <span class="competitors-title">\{{@key}}</span>
+        </td>
+      </tr>
+
+      \{{#each this}}
+        <tr class="competitors-row competitors-row-\{{@../index}}">
+          <td class="keyword-tag">
+            <table class="keyword-tag-item primary" cellpadding="0" cellspacing="0" title="\{{keyword}}">
+              <tr>
+                <td class="keyword-tag-corner"><img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/keyword-tag-primary.png" height="28" width="18" alt="" /></td>
+                <td><span class="keyword-text">\{{keyword}}</span></td>
+              </tr>
+            </table>
+          </td>
+
+          <td class="keyword-position">
+            <span class="keyword-position-text">\{{previous}}</span>
+          </td>
+
+          <td class="keyword-position">
+            <span class="keyword-position-text">\{{current}}</span>
+          </td>
+
+          \{{#compare delta "<" 0}}
+          <td class="keyword-change up">
+              <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
+              <span class="keyword-change-text">\{{abs delta}}</span>
+          </td>
+          \{{/compare}}
+          \{{#compare delta ">" 0}}
+          <td class="keyword-change down">
+              <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
+              <span class="keyword-change-text">\{{abs delta}}</span>
+          </td>
+          \{{/compare}}
+          \{{#compare delta "==" 0}}
+          <td class="keyword-change">
+              <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
+              <span class="keyword-change-text">\{{abs delta}}</span>
+          </td>
+          \{{/compare}}
+
+        </tr>
+      \{{else}}
+        <tr class="competitors-row competitors-row-\{{@index}}">
+          <td colspan="4">
+            <p class="no-data-in-table">{{weekly_digest_competitors_nodata}}</p>
+          </td>
+        </tr>
+      \{{/each}}
+    \{{/each}}
+
+  </tbody>
+</table>
+\{{/serp_weekly.data}}

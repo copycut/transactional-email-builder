@@ -1,0 +1,226 @@
+{
+    "userId": 6236,
+    "url": "woorank.com",
+    "language": "en",
+    "date": "2016-05-15",
+    "analytics_weekly": {
+        "since": "2016-05-15",
+        "until": "2016-05-28",
+        "data": {
+            "avgSessionDuration": {
+                "current": 106.99,
+                "previous": 103.49,
+                "delta": 3.51,
+                "percent": 3.28
+            },
+            "bounceRate": {
+                "current": 68.44,
+                "previous": 68.7,
+                "delta": -0.26,
+                "percent": -0.38
+            },
+            "dailySessions": [{
+                "current": 28581,
+                "previous": 29533,
+                "delta": -952,
+                "percent": -3.33
+            }, {
+                "current": 40658,
+                "previous": 40375,
+                "delta": 283,
+                "percent": 0.7
+            }, {
+                "current": 42367,
+                "previous": 43599,
+                "delta": -1232,
+                "percent": -2.91
+            }, {
+                "current": 41291,
+                "previous": 43122,
+                "delta": -1831,
+                "percent": -4.43
+            }, {
+                "current": 39783,
+                "previous": 38427,
+                "delta": 1356,
+                "percent": 3.41
+            }, {
+                "current": 37106,
+                "previous": 35620,
+                "delta": 1486,
+                "percent": 4
+            }, {
+                "current": 28127,
+                "previous": 28894,
+                "delta": -767,
+                "percent": -2.73
+            }],
+            "landingPages": [{
+                "key": "/",
+                "current": 21185,
+                "previous": 21413,
+                "delta": -228,
+                "percent": -1.08
+            }, {
+                "key": "/es",
+                "current": 7329,
+                "previous": 7301,
+                "delta": 28,
+                "percent": 0.38
+            }, {
+                "key": "/en/user/overview",
+                "current": 3555,
+                "previous": 3582,
+                "delta": -27,
+                "percent": -0.76
+            }, {
+                "key": "/fr",
+                "current": 3295,
+                "previous": 2991,
+                "delta": 304,
+                "percent": 9.23
+            }, {
+                "key": "/pt",
+                "current": 1593,
+                "previous": 1720,
+                "delta": -127,
+                "percent": -7.97
+            }],
+            "mediums": [{
+                "key": "organic",
+                "current": 194828,
+                "previous": 199843,
+                "delta": -5015,
+                "percent": -2.57
+            }, {
+                "key": "direct",
+                "current": 35485,
+                "previous": 35630,
+                "delta": -145,
+                "percent": -0.41
+            }, {
+                "key": "referral",
+                "current": 27108,
+                "previous": 27580,
+                "delta": -472,
+                "percent": -1.74
+            }],
+            "newVisits": {
+                "current": 209593,
+                "previous": 206992,
+                "delta": 2601,
+                "percent": 1.24
+            },
+            "pageViews": {
+                "current": 446713,
+                "previous": 440788,
+                "delta": 5925,
+                "percent": 1.33
+            },
+            "returningVisits": {
+                "current": 50774,
+                "previous": 50921,
+                "delta": -147,
+                "percent": -0.29
+            },
+            "sessions": {
+                "current": 260367,
+                "previous": 257913,
+                "delta": 2454,
+                "percent": 0.94
+            },
+            "socialNetworks": [{
+                "key": "Facebook",
+                "current": 375,
+                "previous": 459,
+                "delta": -84,
+                "percent": -22.4
+            }, {
+                "key": "Blogger",
+                "current": 118,
+                "previous": 138,
+                "delta": -20,
+                "percent": -16.95
+            }, {
+                "key": "YouTube",
+                "current": 56,
+                "previous": 64,
+                "delta": -8,
+                "percent": -14.29
+            }, {
+                "key": "Netvibes",
+                "current": 40,
+                "previous": 10,
+                "delta": 30,
+                "percent": 75
+            }, {
+                "key": "Taringa!",
+                "current": 39,
+                "previous": 50,
+                "delta": -11,
+                "percent": -28.21
+            }],
+            "users": {
+                "current": 226272,
+                "previous": 231776,
+                "delta": -5504,
+                "percent": -2.43
+            }
+        }
+    },
+    "serp_weekly": {
+        "since": "2016-05-15",
+        "until": "2016-05-28",
+        "country": "us",
+        "data": {
+            "topChanges": [{
+                "keyword": "doctor who",
+                "url": "bbc.co.uk",
+                "current": 13,
+                "previous": 14,
+                "delta": -1,
+                "percent": 6.67
+            },{
+                "keyword": "area of a circle",
+                "url": "bbc.co.uk",
+                "current": 15,
+                "previous": 14,
+                "delta": 1,
+                "percent": 6.67
+            }],
+            "topCompetitorsChanges": {
+                "seositecheckup.com": [{
+                    "keyword": "website ranking",
+                    "url": "seositecheckup.com",
+                    "current": 39,
+                    "previous": 91,
+                    "delta": -52,
+                    "percent": -133.33
+                }, {
+                    "keyword": "website analysis",
+                    "url": "seositecheckup.com",
+                    "current": 8,
+                    "previous": 13,
+                    "delta": -5,
+                    "percent": -62.5
+                }],
+                "moz.com": [{
+                    "keyword": "website ranking",
+                    "url": "moz.com",
+                    "current": 42,
+                    "previous": 44,
+                    "delta": -2,
+                    "percent": -4.76
+                }],
+                "seoprofiler.com": [{
+                    "keyword": "website ranking",
+                    "url": "moz.com",
+                    "current": 44,
+                    "previous": 42,
+                    "delta": 2,
+                    "percent": 4.76
+                }]
+            }
+        }
+    }
+}

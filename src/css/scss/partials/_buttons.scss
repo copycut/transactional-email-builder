@@ -38,9 +38,9 @@
 
   a {
     background-color: $white;
-    border: solid 1px $primary-color;
+    border: solid 1px $primary;
     border-radius: $btn-br;
-    color: $primary-color;
+    color: $primary;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -51,17 +51,17 @@
   }
 }
 
-// Primary call to action button
-.btn-primary {
+@each $color, $colorValue in $colors {
+  .btn-#{$color} {
+    table td {
+      background-color: $colorValue;
+    }
 
-  table td {
-    background-color: $primary-color;
-  }
-
-  a {
-    background-color: $primary-color;
-    border-color: $primary-color;
-    color: $white;
+    a {
+      background-color: $colorValue;
+      border-color: $colorValue;
+      color: $white;
+    }
   }
 }
 
@@ -74,7 +74,7 @@
 
   a {
     background-color: transparent;
-    border-color: $primary-color;
-    color: $primary-color;
+    border-color: $primary;
+    color: $primary;
   }
 }

@@ -1,0 +1,50 @@
+.title-box {
+  padding: 25px 10px;
+  color: $primary;
+  text-align: center;
+  background-color: $primary-smoke;
+
+  .title-box-note {
+    display: inline-block;
+    font-size: $font-size-small;
+    color: $primary;
+    padding: 2px 10px;
+    margin: 10px 0 -10px 0;
+    background-color: $primary-lighter;
+    border-radius: 5px;
+  }
+
+  .title-box-text {
+    font-size: 20px;
+    font-weight: $font-weight-normal;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+
+    .url {
+      color: $white !important;
+      font-weight: $font-weight-semibold;
+      text-decoration: none !important;
+    }
+  }
+
+  &.title-box-warning {
+    color: $white;
+    background-color: $warning;
+  }
+
+  &.title-box-error {
+    color: $white;
+    background-color: $error;
+  }
+
+  &.title-box-primary {
+    color: $white;
+    background-color: $primary;
+  }
+
+  &.title-box-success {
+    color: $white;
+    background-color: $success;
+  }
+}

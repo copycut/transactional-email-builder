@@ -1,0 +1,33 @@
+$mixValue: 5%;
+
+.competitors-row {
+  text-align: left;
+
+  .competitors-title-col {
+    text-align: left;
+    border-top: 1px solid $white;
+    padding: 10px !important;
+  }
+
+  .competitors-title {
+    font-size: 15px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  .keyword-tag,
+  .keyword-position,
+  .keyword-change {
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+
+    td {
+      padding-top: 0 !important;
+    }
+  }
+
+  .keyword-tag-corner {
+    padding-left: 10px !important;
+    width: 28px !important;
+  }
+}

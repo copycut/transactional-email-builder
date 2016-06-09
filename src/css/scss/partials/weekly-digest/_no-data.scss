@@ -1,0 +1,24 @@
+.no-data {
+  .no-data-icon {
+    width: 64px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .no-data-text {
+    font-size: 14px;
+    color: $grey;
+    font-style: italic;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 20px;
+  }
+}
+
+.no-data-in-table {
+  padding-left: 10px;
+  font-size: 14px;
+  color: $grey;
+  font-style: italic;
+  text-align: left;
+}

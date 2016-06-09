@@ -1,0 +1,38 @@
+<tr>
+  <td>
+    {{#color}}
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-{{this}}.gif" height="7" width="7" alt="" />
+    {{/color}}
+
+    {{#index}}
+      \{{#compare index '==' 0}}
+        <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-primary.gif" height="7" width="7" alt="" />
+      \{{/compare}}
+      \{{#compare index '==' 1}}
+        <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-success.gif" height="7" width="7" alt="" />
+      \{{/compare}}
+      \{{#compare index '==' 2}}
+        <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-warning.gif" height="7" width="7" alt="" />
+      \{{/compare}}
+    {{/index}}
+
+    <span class="graph-legend-text">
+      <span class="graph-legend-title">{{title}}</span> ({{weekly_digest_from}}: {{previous}} {{weekly_digest_to}}: {{current}})
+    </span>
+
+    {{#compare delta ">" 0}}
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" height="5" width="9" alt="" />
+      <span class="graph-legend-text up">{{percent}}</span>
+    {{/compare}}
+
+    {{#compare delta "<" 0}}
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" height="5" width="9" alt="" />
+      <span class="graph-legend-text down">{{percent}}</span>
+    {{/compare}}
+
+    {{#compare delta "==" 0}}
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" height="5" width="9" alt="" />
+      <span class="graph-legend-text">{{percent}}</span>
+    {{/compare}}
+  </td>
+</tr>

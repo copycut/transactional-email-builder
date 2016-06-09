@@ -1,0 +1,60 @@
+<h4 class="section-small-title">{{weekly_digest_landing_pages}}</h4>
+
+\{{#analytics_weekly.data}}
+<table class="graph-bar-difference-container" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      \{{#each landingPages as |page index|}}
+        <p class="bar-title"><span class="graph-legend-title">\{{key}}</span> ({{weekly_digest_from}}: \{{previous}} {{weekly_digest_to}}: \{{current}})</p>
+        <table class="graph-bar-difference" width="100%" cellpadding="0" cellspacing="0">
+          <tr class="bar-container">
+            <td class="bar" style="width:\{{getPercentProportional ../landingPages page 0}}%;/">
+              <span class="current-bar" style="width:\{{getPercentProportional ../landingPages page 1}}%;/"></span>
+              <span class="previous-bar" style="width:\{{getPercentProportional ../landingPages page 2}}%;/"></span>
+              <img class="previous" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/graph-pointer.png" height="25" width="3" alt="" style="left:\{{getPercentProportional ../landingPages page 2}}%;">
+
+              \{{#compare percent ">" 0}}
+                <div class="bar-change up" style="left:\{{getPercentProportional ../landingPages page 0}}%">
+                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </div>
+              \{{/compare}}
+
+              \{{#compare percent "<" 0}}
+                <div class="bar-change down" style="left:\{{getPercentProportional ../landingPages page 0}}%">
+                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </div>
+              \{{/compare}}
+
+              \{{#compare percent "==" 0}}
+                <div class="bar-change" style="left:\{{getPercentProportional ../landingPages page 0}}%">
+                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </div>
+              \{{/compare}}
+
+            </td>
+          </tr>
+        </table>
+      \{{/each}}
+    </td>
+  </tr>
+</table>
+
+<!-- LEGEND -->
+<table class="graph-legend" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-primary.gif" height="7" width="7" alt="" />
+      <span class="graph-legend-text">{{weekly_digest_current_week}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-grey.gif" height="7" width="7" alt="" />
+      <span class="graph-legend-text">{{weekly_digest_previous_week}}</span>
+    </td>
+  </tr>
+</table>
+\{{/analytics_weekly.data}}

@@ -3,38 +3,40 @@ still_questions: <%= i18n[language]['general'].still_questions %>
 ---
 <!DOCTYPE html>
 <html lang="{{language}}">
-	<head>
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>{{title}}</title>
-		<link href="../src/css/main.css" media="all" rel="stylesheet" type="text/css" />
-		<link href="../src/css/{{style}}.css" media="all" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-	<table class="body">
-		<tr>
-			<td></td>
-			<td class="logo-container align-center">
-				<a href="https://www.woorank.com" target="_blank">
-					<img src="https://d384x5zk471rz.cloudfront.net/uptime-email-assets/woorank-logo.png" alt="Woorank">
-				</a>
-			</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="container">
-				<div class="content">{{body}}</div>
-			</td>
-			<td></td>
-		</tr>
-		<tr class="footer">
-			<td></td>
-			<td class="align-center">
-				<p>{{{still_questions}}}</p>
-			</td>
-			<td></td>
-		</tr>
-	</table>
-	</body>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{title}}</title>
+    <link href="../src/css/main.css" media="all" rel="stylesheet" type="text/css" />
+    {{#style}}
+      <link href="../src/css/{{style}}.css" media="all" rel="stylesheet" type="text/css" />
+    {{/style}}
+  </head>
+  <body>
+  <table class="body">
+    <tr>
+      <td></td>
+      <td class="logo-container align-center">
+        <a href="https://www.woorank.com" target="_blank">
+          <img src="https://d384x5zk471rz.cloudfront.net/newsletter-assets/generic/woorank-logo.png" width="200" height="69" alt="Woorank">
+        </a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="container">
+        <div class="content">{{body}}</div>
+      </td>
+      <td></td>
+    </tr>
+    <tr class="footer">
+      <td></td>
+      <td class="align-center">
+        <p>{{{still_questions}}}</p>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+  </body>
 </html>

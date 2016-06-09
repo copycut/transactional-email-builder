@@ -1,13 +1,19 @@
 {
   "name": "transactional-email-builder",
   "version": "0.1.0",
+  "author": "Woorank",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/woorank/transactional-email-builder"
   },
+  "scripts": {
+    "start": "grunt",
+    "dev": "grunt dev",
+    "build": "./tools/render.js --template=dist/weekly-digest-en.html --json=tools/dummy-data.json --helpers=src/helpers > tools/email.html"
+  },
   "dependencies": {
-    "assemble": "0.10.0",
+    "assemble": "0.4.0",
     "assemble-contrib-i18n": "0.1.6",
     "cheerio": "0.20.0",
     "config": "1.20.1",
@@ -20,6 +26,12 @@
     "grunt-premailer": "0.2.13",
     "grunt-replace": "1.0.1",
     "grunt-zip": "0.17.1",
-    "load-grunt-tasks": "3.5.0"
+    "load-grunt-tasks": "3.5.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.0",
+    "handlebars": "^4.0.5",
+    "minimist": "^1.2.0"
   }
 }

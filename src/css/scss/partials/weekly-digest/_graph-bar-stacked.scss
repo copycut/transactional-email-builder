@@ -1,0 +1,24 @@
+.graph-bar-stacked {
+  vertical-align: middle;
+  padding-top: 15px;
+
+  .bar {
+    padding: 5px 10px;
+    text-align: left;
+    color: $white;
+    font-size: 11px;
+    background-color: $grey;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @each $color, $colorValue in $colors {
+      &.#{$color} {
+        background-color: $colorValue;
+      }
+    }
+  }
+}

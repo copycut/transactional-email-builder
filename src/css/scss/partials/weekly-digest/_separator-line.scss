@@ -1,0 +1,14 @@
+.separator-line {
+  td {
+    height: 1px;
+    background-color: $grey-lighter;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 0;
+
+    img {
+      display: block;
+      margin: 0;
+    }
+  }
+}

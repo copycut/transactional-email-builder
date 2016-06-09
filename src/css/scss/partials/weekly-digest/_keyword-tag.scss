@@ -1,0 +1,72 @@
+$mixBackground: 25%;
+
+.keyword-tag {
+  vertical-align: middle;
+  padding: 0 !important;
+  text-align: left;
+
+  .keyword-tag-item {
+    height: 28px;
+    vertical-align: middle;
+
+    @each $color, $colorValue in $colors {
+      &.#{$color} .keyword-text {
+        background-color: get-variant-color($color, 'smoke');
+        color: $colorValue;
+      }
+    }
+
+    tr td {
+      text-align: left;
+    }
+  }
+
+  .keyword-tag-corner {
+    width: 18px !important;
+  }
+
+  .keyword-text {
+    display: inline-block;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+    vertical-align: middle;
+    height: 28px;
+    line-height: 28px;
+    padding-right: 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100px;
+
+    @include breakpoint($screen-sm) {
+      max-width: none !important;
+    }
+  }
+}
+
+.keyword-position-text,
+.keyword-position {
+  vertical-align: middle;
+  font-weight: $font-weight-semibold;
+}
+
+
+.keyword-change {
+  vertical-align: middle;
+  font-weight: $font-weight-semibold;
+  color: $grey;
+
+  img,
+  .keyword-change-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.up {
+    color: $success;
+  }
+
+  &.down {
+    color: $error;
+  }
+}

@@ -1,0 +1,70 @@
+<h3 class="section-sub-title">{{weekly_digest_traffic_subtitle}}</h3>
+
+\{{#analytics_weekly.data}}
+<table class="data-table data-table-traffic" width="100%" cellpadding="0" cellspacing="0">
+  <thead class="data-table-head">
+    <tr>
+      <th class="left">{{weekly_digest_metric}}</th>
+      <th class="right">{{weekly_digest_previous_week}}</th>
+      <th class="right">{{weekly_digest_current_week}}</th>
+      <th>{{weekly_digest_change}}</th>
+    </tr>
+  </thead>
+  <tbody class="data-table-body">
+    \{{#sessions}}
+      {{> trafficDashboardItem
+        title=weekly_digest_session
+        previous="{{previous}}"
+        current="{{current}}"
+        precent="{{abs percent}}"
+      }}
+    \{{/sessions}}
+
+    \{{#users}}
+      {{> trafficDashboardItem
+        title=weekly_digest_users
+        previous="{{previous}}"
+        current="{{current}}"
+        precent="{{abs percent}}"
+      }}
+    \{{/users}}
+
+    \{{#pageViews}}
+      {{> trafficDashboardItem
+        title=weekly_digest_page_views
+        previous="{{previous}}"
+        current="{{current}}"
+        precent="{{abs percent}}"
+      }}
+    \{{/pageViews}}
+
+    \{{#avgSessionDuration}}
+      {{> trafficDashboardItem
+        title=weekly_digest_average_session_duration
+        previous="{{previous}}s"
+        current="{{current}}s"
+        precent="{{abs percent}}"
+      }}
+    \{{/avgSessionDuration}}
+
+    \{{#bounceRate}}
+      {{> trafficDashboardItem
+        title=weekly_digest_bounce_rate
+        previous="{{previous}}%"
+        current="{{current}}%"
+        precent="{{abs percent}}"
+      }}
+    \{{/bounceRate}}
+
+    \{{#newVisits}}
+      {{> trafficDashboardItem
+        title=weekly_digest_new_visits
+        previous="{{previous}}"
+        current="{{current}}"
+        precent="{{abs percent}}"
+      }}
+    \{{/newVisits}}
+
+  </tbody>
+</table>
+\{{/analytics_weekly.data}}

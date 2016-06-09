@@ -1,0 +1,47 @@
+<h3 class="section-sub-title">{{weekly_digest_social_subtitle}}</h3>
+
+\{{#analytics_weekly.data}}
+<table class="data-table" width="100%" cellpadding="0" cellspacing="0">
+  <thead class="data-table-head">
+    <tr>
+      <th class="left data-table-keyword-col">{{weekly_digest_source}}</th>
+      <th>{{weekly_digest_previous_week}}</th>
+      <th>{{weekly_digest_current_week}}</th>
+      <th>{{weekly_digest_change}}</th>
+    </tr>
+  </thead>
+  <tbody class="data-table-body">
+    \{{#each socialNetworks}}
+    <tr>
+      <td class="social-type left">\{{key}}</td>
+      <td class="social-rank">
+          <strong class="social-rank-text">\{{previous}}</strong>
+      </td>
+      <td class="social-rank">
+          <strong class="social-rank-text">\{{current}}</strong>
+      </td>
+
+      \{{#compare delta ">" 0}}
+      <td class="keyword-change up">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
+          <span class="keyword-change-text">\{{abs percent}}%</span>
+      </td>
+      \{{/compare}}
+      \{{#compare delta "<" 0}}
+      <td class="keyword-change down">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
+          <span class="keyword-change-text">\{{abs percent}}%</span>
+      </td>
+      \{{/compare}}
+      \{{#compare delta "==" 0}}
+      <td class="keyword-change">
+          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
+          <span class="keyword-change-text">\{{abs percent}}%</span>
+      </td>
+      \{{/compare}}
+    </tr>
+    \{{/each}}
+
+  </tbody>
+</table>
+\{{/analytics_weekly.data}}

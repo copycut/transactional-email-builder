@@ -1,12 +1,18 @@
 // Main scss styles
-@import 'partials/config';
-@import 'partials/global';
-@import 'partials/layout';
-@import 'partials/type';
-@import 'partials/buttons';
-@import 'partials/other';
-@import 'partials/alerts';
-@import 'partials/alerts-box';
-@import 'partials/responsive';
-@import 'partials/content';
-@import 'partials/uptime';
+@import
+  'partials/config',
+  'partials/global',
+  'partials/layout',
+  'partials/type',
+  'partials/buttons',
+  'partials/other',
+  'partials/alerts',
+  'partials/alerts-box',
+  'partials/title-box',
+  'partials/responsive',
+  'partials/content',
+  'partials/uptime';
+
+// Weekly Digest
+@import
+  'partials/weekly-digest/_index';

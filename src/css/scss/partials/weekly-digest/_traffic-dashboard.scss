@@ -1,0 +1,71 @@
+.dashboard-table {
+  text-align: center;
+  padding-top: 15px;
+
+  .mobile-full-width {
+    padding-bottom: 30px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include breakpoint($screen-sm) {
+      display: table-cell !important;
+      width: 33% !important;
+      max-width: 33% !important;
+    }
+  }
+
+  .big-number {
+    display: block;
+    font-size: 50px;
+    font-weight: $font-weight-light;
+    color: $grey-darker;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+
+    .big-number-percent {
+      font-size: 16px;
+      font-weight: $font-weight-light;
+      color: $grey-darker;
+    }
+  }
+
+  .big-number-changes {
+    display: block;
+    vertical-align: middle;
+    font-size: $font-size-small;
+    line-height: 1.33;
+    padding-bottom: 5px;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .big-number-changes-title {
+      text-transform: uppercase;
+      font-weight: $font-weight-light;
+      color: $grey;
+      vertical-align: middle;
+      line-height: 1;
+
+      &.up {
+        color: $success;
+      }
+
+      &.down {
+        color: $error;
+      }
+    }
+  }
+
+  .big-number-details {
+    display: block;
+    color: $grey;
+    font-size: $font-size-small;
+    line-height: 1.33;
+  }
+}
