@@ -8,6 +8,8 @@ var argv = require('minimist')(process.argv.slice(2), {
   string: [ 'template', 'json', 'helpers' ]
 });
 
+handlebars.logger.log = console.error.bind(console);
+
 function readFile (filePath) {
   return new Promise((resolve, reject) => {
     fs.readFile(path.resolve(filePath), { encoding: 'utf8' }, (err, data) => {
@@ -64,5 +66,5 @@ Promise.all([
   console.log(result);
 })
 .catch((error) => {
-  console.error(error);
+  console.error(error.stack);
 });

@@ -31,24 +31,24 @@
           <span class="keyword-position-text">\{{current}}</span>
       </td>
 
-      \{{#compare delta "<" 0}}
+      \{{#ltz delta}}
       <td class="keyword-change up">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
-      \{{/compare}}
-      \{{#compare delta ">" 0}}
+      \{{/ltz}}
+      \{{#gtz delta}}
       <td class="keyword-change down">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
-      \{{/compare}}
-      \{{#compare delta "==" 0}}
+      \{{/gtz}}
+      \{{#eqz delta}}
       <td class="keyword-change">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
-      \{{/compare}}
+      \{{/eqz}}
 
     </tr>
     \{{/each}}

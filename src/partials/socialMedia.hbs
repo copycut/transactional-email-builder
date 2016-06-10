@@ -21,24 +21,24 @@
           <strong class="social-rank-text">\{{current}}</strong>
       </td>
 
-      \{{#compare delta ">" 0}}
+      \{{#gtz delta}}
       <td class="keyword-change up">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
           <span class="keyword-change-text">\{{abs percent}}%</span>
       </td>
-      \{{/compare}}
-      \{{#compare delta "<" 0}}
+      \{{/gtz}}
+      \{{#ltz delta}}
       <td class="keyword-change down">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
           <span class="keyword-change-text">\{{abs percent}}%</span>
       </td>
-      \{{/compare}}
-      \{{#compare delta "==" 0}}
+      \{{/ltz}}
+      \{{#eqz delta}}
       <td class="keyword-change">
           <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
           <span class="keyword-change-text">\{{abs percent}}%</span>
       </td>
-      \{{/compare}}
+      \{{/eqz}}
     </tr>
     \{{/each}}
 
