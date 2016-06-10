@@ -5,34 +5,34 @@
     {{/color}}
 
     {{#index}}
-      \{{#compare index '==' 0}}
+      \{{#eq index 0}}
         <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-primary.gif" height="7" width="7" alt="" />
-      \{{/compare}}
-      \{{#compare index '==' 1}}
+      \{{/eq}}
+      \{{#eq index 1}}
         <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-success.gif" height="7" width="7" alt="" />
-      \{{/compare}}
-      \{{#compare index '==' 2}}
+      \{{/eq}}
+      \{{#eq index 2}}
         <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-warning.gif" height="7" width="7" alt="" />
-      \{{/compare}}
+      \{{/eq}}
     {{/index}}
 
     <span class="graph-legend-text">
       <span class="graph-legend-title">{{title}}</span> ({{weekly_digest_from}}: {{previous}} {{weekly_digest_to}}: {{current}})
     </span>
 
-    {{#compare delta ">" 0}}
+    {{#gtz delta}}
       <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" height="5" width="9" alt="" />
       <span class="graph-legend-text up">{{percent}}</span>
-    {{/compare}}
+    {{/gtz}}
 
-    {{#compare delta "<" 0}}
+    {{#ltz delta}}
       <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" height="5" width="9" alt="" />
       <span class="graph-legend-text down">{{percent}}</span>
-    {{/compare}}
+    {{/ltz}}
 
-    {{#compare delta "==" 0}}
+    {{#eqz delta}}
       <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" height="5" width="9" alt="" />
       <span class="graph-legend-text">{{percent}}</span>
-    {{/compare}}
+    {{/eqz}}
   </td>
 </tr>
