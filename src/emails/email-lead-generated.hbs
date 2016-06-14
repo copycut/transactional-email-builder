@@ -1,0 +1,41 @@
+---
+email_lead_generated_subject: <%= i18n[language]['general'].email_lead_generated_subject %>
+email_lead_generated_description: <%= i18n[language]['general'].email_lead_generated_description %>
+title: <%= i18n[language]['general'].email_lead_generated_subject %>
+---
+<table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action" itemscope itemtype="http://schema.org/ConfirmAction">
+    <tr>
+        <td class="content-wrap body-content">
+            <meta itemprop="name" content="Confirm Email" />
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="content-block">
+                        <h2>{{email_lead_generated_subject}}</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-block">
+                        {{{email_lead_generated_description}}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="btn-container" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+            <table class="btn btn-primary">
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

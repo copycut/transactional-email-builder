@@ -1,0 +1,6 @@
+---
+email_lead_generated_subject: <%= i18n[language]['general'].email_lead_generated_subject %>
+---
+{
+"subject": "{{email_lead_generated_subject}}"
+}
