@@ -1,6 +1,10 @@
 ---
 email_lead_generated_subject: <%= i18n[language]['general'].email_lead_generated_subject %>
 email_lead_generated_description: <%= i18n[language]['general'].email_lead_generated_description %>
+name_label: <%= i18n[language]['general'].name %>
+email_label: <%= i18n[language]['general'].email %>
+phone_label: <%= i18n[language]['general'].phone %>
+website_label: <%= i18n[language]['general'].website %>
 title: <%= i18n[language]['general'].email_lead_generated_subject %>
 ---
 <table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action" itemscope itemtype="http://schema.org/ConfirmAction">
@@ -15,24 +19,13 @@ title: <%= i18n[language]['general'].email_lead_generated_subject %>
                 </tr>
                 <tr>
                     <td class="content-block">
-                        {{{email_lead_generated_description}}}
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td class="btn-container" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-            <table class="btn btn-primary">
-                <tr>
-                    <td align="center">
-                        <table>
-                            <tr>
-                                <td>
-                                    &nbsp;
-                                </td>
-                            </tr>
-                        </table>
+                        <p>{{{email_lead_generated_description}}}</p>
+                        <ul>
+                            <li>{{{name_label}}}: [[lead_name]]</li>
+                            <li>{{{email_label}}}: [[lead_email]]</li>
+                            <li>{{{phone_label}}}: [[lead_phone]]</li>
+                            <li>{{{website_label}}}: [[lead_website]]</li>
+                        </ul>
                     </td>
                 </tr>
             </table>
