@@ -1,0 +1,7 @@
+---
+email_uptime_blacklist_title: <%= i18n[language]['monitoring'].email_uptime_blacklist_title %>
+url: '{{var:url}}'
+---
+{
+  "subject": "{{email_uptime_blacklist_title}} {{url}}"
+}
