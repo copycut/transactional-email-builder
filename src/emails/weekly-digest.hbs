@@ -1,5 +1,6 @@
 ---
 title: <%= i18n[language]['general'].weekly_digest_subject %>
+imgSrc: "https://d384x5zk471rz.cloudfront.net/weekly-digest"
 still_questions: <%= i18n[language]['general'].weekly_digest_unsubscribe %>
 weekly_digest_title: <%= i18n[language]['general'].weekly_digest_title %>
 weekly_digest_keywords_title: <%= i18n[language]['general'].weekly_digest_keywords_title %>
@@ -44,6 +45,7 @@ weekly_digest_new_visits: <%= i18n[language]['general'].weekly_digest_new_visits
 weekly_digest_new_visitors: <%= i18n[language]['general'].weekly_digest_new_visitors %>
 weekly_digest_returning_visitors: <%= i18n[language]['general'].weekly_digest_returning_visitors %>
 weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
+page_label: <%= i18n[language]['general'].page %>
 ---
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
 
@@ -54,8 +56,8 @@ weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
       <table class="title-box title-box-primary" width="100%" cellpadding="0" cellspacing="0">
         <tr>
           <td align="center" valign="middle">
-            <h1 class="title-box-text">{{weekly_digest_title}} <span class="url">\{{url}}</span></h1>
-            <p class="title-box-note">{{weekly_digest_week}} #\{{week date}} - \{{year date}}</p>
+            <h1 class="title-box-text">{{weekly_digest_title}} <a href="\{{url}}" target="_blank" class="url">\{{url}}</a></h1>
+            <span class="title-box-note">{{weekly_digest_week}} #\{{week date}} - \{{year date}}</span>
           </td>
         </tr>
       </table>
@@ -71,15 +73,7 @@ weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
             <td class="content-block" align="center" valign="top">
               <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
                 <!-- TITLE -->
-                <tr>
-                  <td align="center">
-                      <h2 class="section-title">
-                        <img height="22" width="22" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/keyword-icon.png" alt="" />
-                        {{weekly_digest_keywords_title}}
-                      </h2>
-                    </div>
-                  </td>
-                </tr>
+                {{> title text=weekly_digest_keywords_title icon="keyword-icon"}}
 
                 <!-- TABLE DATA -->
                 \{{#if serp_weekly.data.topChanges}}
@@ -119,15 +113,7 @@ weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
             <td class="content-block" align="center" valign="top">
               <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
                 <!-- TITLE -->
-                <tr>
-                  <td align="center">
-                      <h2 class="section-title">
-                        <img height="21" width="24" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/competitors-icon.png" alt="" />
-                        {{weekly_digest_competitors_title}}
-                      </h2>
-                    </div>
-                  </td>
-                </tr>
+                {{> title text=weekly_digest_competitors_title icon="competitors-icon"}}
 
                 <!-- TABLE DATA -->
                 \{{#if serp_weekly.data.topCompetitorsChanges}}
@@ -175,15 +161,7 @@ weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
             <td class="content-block" align="center" valign="top">
               <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
                 <!-- TITLE -->
-                <tr>
-                  <td align="center">
-                      <h2 class="section-title">
-                        <img height="21" width="24" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/traffic-icon.png" alt="" />
-                        {{weekly_digest_traffic_title}}
-                      </h2>
-                    </div>
-                  </td>
-                </tr>
+                {{> title text=weekly_digest_traffic_title icon="traffic-icon"}}
 
                 \{{#if analytics_weekly}}
                 <!-- NUMBER DASHBOARD -->
@@ -246,15 +224,7 @@ weekly_digest_week: <%= i18n[language]['general'].weekly_digest_week %>
             <td class="content-block" align="center" valign="top">
               <table class="section-table" width="100%" cellpadding="0" cellspacing="0">
                 <!-- TITLE -->
-                <tr>
-                  <td align="center">
-                      <h2 class="section-title">
-                        <img height="22" width="20" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/social-icon.png" alt="" />
-                        {{weekly_digest_social_title}}
-                      </h2>
-                    </div>
-                  </td>
-                </tr>
+                {{> title text=weekly_digest_social_title icon="social-icon"}}
 
                 <!-- TOP SOCIAL NETWORKS -->
                 <tr>

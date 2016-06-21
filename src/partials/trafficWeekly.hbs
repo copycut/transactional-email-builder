@@ -1,43 +1,62 @@
 <h4 class="section-small-title">{{weekly_digest_weekly_traffic_title}}</h4>
 
 \{{#analytics_weekly.data}}
-<table class="graph-bar-difference-container" width="100%" cellpadding="0" cellspacing="0">
+<table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td>
       \{{#each dailySessions}}
-        <p class="bar-title">
-          <span class="graph-legend-title">\{{weekDay @index ../../language}}</span><br/>
-          ({{weekly_digest_from}}: \{{previous}} {{weekly_digest_to}}: \{{current}})
-        </p>
+        <table class="bar-title" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="bar-title-col">
+              <span class="graph-legend-title caps"><strong>\{{weekDay @index ../../language}}</strong></span><br/>
+              <span class="graph-legend-info">({{weekly_digest_from}}: \{{previous}} {{weekly_digest_to}}: \{{current}})</span>
+              \{{#gtz percent}}
+                <span class="bar-change up">
+                  <img src="{{imgSrc}}/change-up.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </span>
+              \{{/gtz}}
+              \{{#ltz percent}}
+                <span class="bar-change down">
+                  <img src="{{imgSrc}}/change-down.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </span>
+              \{{/ltz}}
+              \{{#eqz percent}}
+                <span class="bar-change">
+                  <img src="{{imgSrc}}/change-neutral.png" height="5" width="9" alt="" />
+                  <span class="bar-change-text">\{{abs percent}}%</span>
+                </span>
+              \{{/eqz}}
+            </td>
+          </tr>
+        </table>
+
         <table class="graph-bar-difference" width="100%" cellpadding="0" cellspacing="0">
           <tr class="bar-container">
-            <td class="bar" style="width:\{{getPercentProportional ../dailySessions this 0}}%;/">
-              <span class="current-bar" style="width:\{{getPercentProportional ../dailySessions this 1}}%;/"></span>
-              <span class="previous-bar" style="width:\{{getPercentProportional ../dailySessions this 2}}%;/"></span>
-              <img class="previous" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/graph-pointer.png" height="25" width="3" alt="" style="left:\{{getPercentProportional ../dailySessions this 2}}%;">
-
-              \{{#gtz percent}}
-                <div class="bar-change up" style="left:\{{getPercentProportional ../dailySessions this 0}}%">
-                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" height="5" width="9" alt="" />
-                  <span class="bar-change-text">\{{abs percent}}%</span>
-                </div>
-              \{{/gtz}}
-
-              \{{#ltz percent}}
-                <div class="bar-change down" style="left:\{{getPercentProportional ../dailySessions this 0}}%">
-                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" height="5" width="9" alt="" />
-                  <span class="bar-change-text">\{{abs percent}}%</span>
-                </div>
-              \{{/ltz}}
-
-              \{{#eqz percent}}
-                <div class="bar-change" style="left:\{{getPercentProportional ../dailySessions this 0}}%">
-                  <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" height="5" width="9" alt="" />
-                  <span class="bar-change-text">\{{abs percent}}%</span>
-                </div>
-              \{{/eqz}}
-
-              </div>
+            <td class="bar">
+              <table class="bar-inside" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="current-bar" style="width: \{{getPercentProportional ../dailySessions this 1}}%;"></td>
+                  <td class="previous-bar" style="width: \{{getPercentProportional ../dailySessions this 3}}%;"></td>
+                  <td class="free-space">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+            <td class="bar-space"><img src="{{imgSrc}}/empty.gif" alt="" /></td>
+          </tr>
+        </table>
+        <table class="graph-bar-difference" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="3">
+              <table class="previous-pointer" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="previous-pointer-col" style="width: \{{getPercentProportional ../dailySessions this 2}}%;">
+                    <img src="{{imgSrc}}/point.png" height="5" width="9" alt="" />
+                  </td>
+                  <td class="free-space">&nbsp;</td>
+                </tr>
+              </table>
             </td>
           </tr>
         </table>
@@ -46,19 +65,5 @@
   </tr>
 </table>
 
-<!-- LEGEND -->
-<table class="graph-legend" cellpadding="0" cellspacing="0">
-  <tr>
-    <td>
-      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-primary.gif" height="7" width="7" alt="" />
-      <span class="graph-legend-text">{{weekly_digest_current_week}}</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/legend-grey.gif" height="7" width="7" alt="" />
-      <span class="graph-legend-text">{{weekly_digest_previous_week}}</span>
-    </td>
-  </tr>
-</table>
+{{> legend}}
 \{{/analytics_weekly.data}}

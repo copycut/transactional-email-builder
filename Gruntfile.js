@@ -192,5 +192,6 @@ module.exports = function (grunt) {
   grunt.registerTask('s3upload', ['cdn:aws_s3', 'zip', 'aws_s3:emails']);
   grunt.registerTask('ci', [ 'default', 's3upload' ]);
   grunt.registerTask('dev', ['sass', 'assemble']);
+  grunt.registerTask('build', ['sass', 'assemble', 'premailer']);
   grunt.registerTask('look', ['watch']);
 };

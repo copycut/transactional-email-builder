@@ -13,6 +13,12 @@ $mixValue: 5%;
     font-size: 15px;
     text-align: left;
     padding-bottom: 10px;
+    color: $grey-medium;
+
+    a {
+      color: $grey-medium;
+      text-decoration: none;
+    }
   }
 
   .keyword-tag,
@@ -20,14 +26,9 @@ $mixValue: 5%;
   .keyword-change {
     padding-top: 0 !important;
     padding-bottom: 10px !important;
-
-    td {
-      padding-top: 0 !important;
-    }
   }
 
-  .keyword-tag-corner {
-    padding-left: 10px !important;
-    width: 28px !important;
+  .keyword-text-col {
+    padding-top: 0 !important;
   }
 }

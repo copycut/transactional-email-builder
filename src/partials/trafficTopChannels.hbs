@@ -6,20 +6,26 @@
     \{{#each mediums}}
       \{{#eq @index 0}}
         <td class="bar primary"
-          style="width:\{{getPercentStacked ../mediums this.current}}%" title="\{{getPercentStacked ../mediums this.current}}%">
-          \{{getPercentStacked ../mediums this.current}}%
+          valign="middle"
+          align="left"
+          style="width:\{{getPercentStacked ../mediums this.current}}%;" title="\{{getPercentStacked ../mediums this.current}}%">
+          &nbsp; \{{getPercentStacked ../mediums this.current}}%
         </td>
       \{{/eq}}
       \{{#eq @index 1}}
         <td class="bar success"
-          style="width:\{{getPercentStacked ../mediums this.current}}%" title="\{{getPercentStacked ../mediums this.current}}%">
-          \{{getPercentStacked ../mediums this.current}}%
+          valign="middle"
+          align="left"
+          style="width:\{{getPercentStacked ../mediums this.current}}%;" title="\{{getPercentStacked ../mediums this.current}}%">
+          &nbsp; \{{getPercentStacked ../mediums this.current}}%
         </td>
       \{{/eq}}
       \{{#eq @index 2}}
         <td class="bar warning"
-          style="width:\{{getPercentStacked ../mediums this.current}}%" title="\{{getPercentStacked ../mediums this.current}}%">
-          \{{getPercentStacked ../mediums this.current}}%
+          valign="middle"
+          align="left"
+          style="width:\{{getPercentStacked ../mediums this.current}}%;" title="\{{getPercentStacked ../mediums this.current}}%">
+          &nbsp; \{{getPercentStacked ../mediums this.current}}%
         </td>
       \{{/eq}}
     \{{/each}}

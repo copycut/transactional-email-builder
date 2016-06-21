@@ -12,16 +12,7 @@
   <tbody class="data-table-body">
     \{{#each serp_weekly.data.topChanges}}
     <tr>
-      <td class="keyword-tag">
-        <table class="keyword-tag-item primary" cellpadding="0" cellspacing="0">
-          <tr>
-            <td class="keyword-tag-corner">
-              <img src="https://d384x5zk471rz.cloudfront.net/weekly-digest/keyword-tag-primary.png" height="28" width="18" alt="" />
-            </td>
-            <td><span class="keyword-text">\{{keyword}}</span></td>
-          </tr>
-        </table>
-      </td>
+      {{> keyword label="{{keyword}}" color="primary"}}
 
       <td class="keyword-position">
           <span class="keyword-position-text">\{{previous}}</span>
@@ -33,19 +24,19 @@
 
       \{{#ltz delta}}
       <td class="keyword-change up">
-          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-up.png" alt="" />
+          <img height="5" width="9" src="{{imgSrc}}/change-up.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
       \{{/ltz}}
       \{{#gtz delta}}
       <td class="keyword-change down">
-          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-down.png" alt="" />
+          <img height="5" width="9" src="{{imgSrc}}/change-down.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
       \{{/gtz}}
       \{{#eqz delta}}
       <td class="keyword-change">
-          <img height="5" width="9" src="https://d384x5zk471rz.cloudfront.net/weekly-digest/change-neutral.png" alt="" />
+          <img height="5" width="9" src="{{imgSrc}}/change-neutral.png" alt="" />
           <span class="keyword-change-text">\{{abs delta}}</span>
       </td>
       \{{/eqz}}

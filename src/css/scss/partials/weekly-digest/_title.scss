@@ -1,5 +1,9 @@
 .title-box-text {
   color: $white !important;
+
+  .url {
+    color: $white;
+  }
 }
 
 .section-title {
@@ -9,7 +13,6 @@
   img {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 5px 0 0;
   }
 }
 
@@ -20,6 +23,7 @@
 }
 
 .section-small-title {
+  margin-top: 15px;
   font-size: $font-size-small;
   font-weight: $font-weight-semibold;
   color: $grey-dark;

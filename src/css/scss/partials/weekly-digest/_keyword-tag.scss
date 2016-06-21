@@ -2,45 +2,62 @@ $mixBackground: 25%;
 
 .keyword-tag {
   vertical-align: middle;
-  padding: 0 !important;
+  padding: 10px 0 0 0;
   text-align: left;
+  width: 100px;
+  line-height: 1%; // Outlook hack
 
-  .keyword-tag-item {
+  td,
+  img {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .keyword-tag-table {
     height: 28px;
     vertical-align: middle;
 
     @each $color, $colorValue in $colors {
-      &.#{$color} .keyword-text {
+      &.#{$color} .keyword-inside-table {
         background-color: get-variant-color($color, 'smoke');
         color: $colorValue;
       }
     }
-
-    tr td {
-      text-align: left;
-    }
   }
 
-  .keyword-tag-corner {
+  .keyword-label {
+    vertical-align: middle;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+    white-space: nowrap;
+    line-height: 12px; // 25-13 Outlook hack
+  }
+
+  .keyword-corner,
+  .keyword-end {
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .corner {
+    height: 28px !important;
     width: 18px !important;
   }
 
-  .keyword-text {
-    display: inline-block;
-    font-weight: $font-weight-normal;
-    font-size: $font-size-small;
+  .keyword-end {
+    width: 5px;
+    min-width: 5px;
+    max-width: 5px;
+  }
+
+  .keyword-inside {
+    text-align: left;
     vertical-align: middle;
     height: 28px;
-    line-height: 28px;
-    padding-right: 6px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100px;
+  }
 
-    @include breakpoint($screen-sm) {
-      max-width: none !important;
-    }
+  .keyword-inside-table {
+    width: auto;
   }
 }
 

@@ -1,3 +1,10 @@
+function getDiff (previous, current) {
+  if (previous > current) {
+    return previous - current;
+  }
+  return 0;
+}
+
 module.exports.getPercentProportional = function (items, item, key) {
   var ref = null;
   var percent = null;
@@ -5,6 +12,7 @@ module.exports.getPercentProportional = function (items, item, key) {
   var BEST = 0;
   var CURRENT = 1;
   var PREVIOUS = 2;
+  var DIFF = 3;
 
   switch (key) {
     case BEST:
@@ -22,6 +30,15 @@ module.exports.getPercentProportional = function (items, item, key) {
         value = item.previous;
       }
       break;
+    case DIFF:
+      {
+        value = getDiff(item.previous, item.current);
+      }
+      break;
+  }
+
+  if (key === DIFF && value <= 0) {
+    return 0.01; // Tables don't render weel with width: 0.0%;
   }
 
   items.forEach(item => {

@@ -1,19 +1,23 @@
+$barHeight: 30px;
+
 .graph-bar-stacked {
   vertical-align: middle;
   padding-top: 15px;
 
   .bar {
-    padding: 5px 10px;
+    padding: 0;
     text-align: left;
     color: $white;
     font-size: 11px;
     background-color: $grey;
-    position: relative;
-    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
+    min-height: $barHeight;
+    max-height: $barHeight;
+    height: $barHeight;
+    line-height: 18px; // Outlook hack
 
     @each $color, $colorValue in $colors {
       &.#{$color} {

@@ -32,5 +32,8 @@
 
 .graph-legend-title {
   color: $grey-medium;
-  text-transform: capitalize;
+
+  &.caps {
+    text-transform: capitalize;
+  }
 }
