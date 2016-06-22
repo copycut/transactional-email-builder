@@ -1,18 +1,18 @@
 <tr>
   <td>
     {{#color}}
-      <img src="{{imgSrc}}/legend-{{this}}.gif" height="7" width="7" alt="" />
+      <img src="{{../imgSrc}}/legend-{{this}}.gif" height="7" width="7" alt="" />
     {{/color}}
 
     {{#index}}
       \{{#eq @index 0}}
-        <img src="{{imgSrc}}/legend-primary.gif" height="7" width="7" alt="" />
+        <img src="{{../imgSrc}}/legend-primary.gif" height="7" width="7" alt="" />
       \{{/eq}}
       \{{#eq @index 1}}
-        <img src="{{imgSrc}}/legend-success.gif" height="7" width="7" alt="" />
+        <img src="{{../imgSrc}}/legend-success.gif" height="7" width="7" alt="" />
       \{{/eq}}
       \{{#eq @index 2}}
-        <img src="{{imgSrc}}/legend-warning.gif" height="7" width="7" alt="" />
+        <img src="{{../imgSrc}}/legend-warning.gif" height="7" width="7" alt="" />
       \{{/eq}}
     {{/index}}
     &nbsp; {{! outlook spacing }}

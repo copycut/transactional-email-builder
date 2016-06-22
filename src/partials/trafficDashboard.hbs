@@ -41,8 +41,8 @@
     \{{#avgSessionDuration}}
       {{> trafficDashboardItem
         title=weekly_digest_average_session_duration
-        previous="{{previous}}s"
-        current="{{current}}s"
+        previous="{{previous}} <em>s</em>"
+        current="{{current}} <em>s</em>"
         precent="{{abs percent}}"
       }}
     \{{/avgSessionDuration}}
@@ -50,8 +50,8 @@
     \{{#bounceRate}}
       {{> trafficDashboardItem
         title=weekly_digest_bounce_rate
-        previous="{{previous}}%"
-        current="{{current}}%"
+        previous="{{previous}} <em>%</em>"
+        current="{{current}} <em>%</em>"
         precent="{{abs percent}}"
       }}
     \{{/bounceRate}}

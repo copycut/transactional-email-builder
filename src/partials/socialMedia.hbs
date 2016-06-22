@@ -13,12 +13,14 @@
   <tbody class="data-table-body">
     \{{#each socialNetworks}}
     <tr>
-      <td class="social-type left">\{{key}}</td>
-      <td class="social-rank">
-          <strong class="social-rank-text">\{{previous}}</strong>
+      <td class="social-type left">
+        <strong>\{{key}}</strong>
       </td>
       <td class="social-rank">
-          <strong class="social-rank-text">\{{current}}</strong>
+          <span class="social-rank-text">\{{previous}}</span>
+      </td>
+      <td class="social-rank">
+          <span class="social-rank-text">\{{current}}</span>
       </td>
 
       \{{#gtz delta}}

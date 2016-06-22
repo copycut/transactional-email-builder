@@ -31,8 +31,8 @@
   .data-table-head {
     th {
       text-transform: uppercase;
-      font-size: $font-size-small;
-      color: $grey-dark;
+      font-size: ($font-size-small - 1px);
+      color: $grey-medium;
       font-weight: $font-weight-light;
       border-bottom: 1px solid $border-color;
     }
@@ -43,6 +43,12 @@
       th,
       td {
         padding: 10px 0 0 0;
+
+        em {
+          font-style: normal;
+          font-weight: $font-weight-light;
+          color: $grey-medium;
+        }
       }
     }
   }
